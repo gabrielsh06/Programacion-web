@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                line-height: 1.6;
+                background-color: #f9f9f9;
+                color: #333;
+            }
+
+            #container {
+                max-width: 1200px;
+                margin: auto;
+                padding: 20px;
+            }
+
+            header {
+                background: linear-gradient(90deg, #0066cc, #0099cc);
+                color: white;
+                text-align: center;
+                padding: 40px 20px;
+                border-radius: 10px;
+                margin-bottom: 30px;
+                transition: box-shadow 0.3s ease;
+            }
+
+            header:hover {
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            header h1 {
+                font-size: 2.8rem;
+                margin-bottom: 10px;
+            }
+
+            header p {
+                font-size: 1.2rem;
+                font-weight: 300;
+            }
+
+            nav {
+                background-color: #ffffff;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                margin-bottom: 30px;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+                transition: box-shadow 0.3s ease;
+            }
+
+            nav:hover {
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            }
+
+            nav ul {
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 10px;
+            }
+
+            nav ul li {
+                margin: 10px;
+            }
+
+            nav ul li a {
+                text-decoration: none;
+                color: #0066cc;
+                font-weight: bold;
+                padding: 8px 16px;
+                border-radius: 6px;
+                transition: background 0.3s ease, color 0.3s ease;
+            }
+
+            nav ul li a:hover {
+                background-color: #e6f3ff;
+                color: #004080;
+            }
+
+            .cuerpo {
+                background-color: #ffffff;
+                padding: 25px;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+                margin-bottom: 30px;
+                transition: box-shadow 0.3s ease, transform 0.3s ease;
+            }
+
+            .cuerpo:hover {
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+                transform: translateY(-2px);
+            }
+
+            /* Texto y video */
+            #presentacion {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            #prese-nosotros {
+                flex: 1 1 400px;
+            }
+
+            #presentacion iframe {
+                max-width: 100%;
+                border-radius: 10px;
+                transition: box-shadow 0.3s ease;
+            }
+
+            #presentacion iframe:hover {
+                box-shadow: 0 0 15px rgba(0, 102, 204, 0.2);
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+
+            table thead {
+                background-color: #0066cc;
+                color: white;
+            }
+
+            table th,
+            table td {
+                padding: 12px;
+                border: 1px solid #ddd;
+                text-align: center;
+                font-size: 0.95rem;
+                transition: background-color 0.3s ease;
+            }
+
+            table tbody tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            table tbody tr:hover {
+                background-color: #e6f3ff;
+            }
+
+            form {
+                margin-top: 20px;
+            }
+
+            .form-group {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            textarea {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                font-size: 1rem;
+                margin-bottom: 15px;
+                transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            input:focus,
+            textarea:focus {
+                outline: none;
+                border-color: #0066cc;
+                box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+            }
+
+            textarea {
+                min-height: 120px;
+                resize: vertical;
+            }
+
+            footer {
+                background-color: #0066cc;
+                color: white;
+                padding: 40px 20px;
+                border-radius: 10px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 30px;
+                justify-content: space-between;
+            }
+
+            .footer-section {
+                flex: 1 1 200px;
+                transition: transform 0.3s ease;
+            }
+
+            .footer-section:hover {
+                transform: translateY(-2px);
+            }
+
+            .footer-section p {
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            .footer-section ul {
+                list-style: none;
+            }
+
+            .footer-section ul li {
+                margin-bottom: 8px;
+            }
+
+            .footer-section ul li a {
+                color: white;
+                text-decoration: none;
+                font-size: 0.95rem;
+                transition: color 0.3s ease;
+            }
+
+            .footer-section ul li a:hover {
+                color: #cce6ff;
+                text-decoration: underline;
+            }
+
+            .footer-section ul li img {
+                width: 24px;
+                height: 24px;
+                margin-right: 10px;
+                transition: transform 0.3s ease;
+            }
+
+            .footer-section ul li img:hover {
+                transform: scale(1.1);
+            }
+
+            @media (max-width: 768px) {
+                #presentacion {
+                    flex-direction: column;
+                }
+
+                nav ul {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                footer {
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+            }
+
+        </style>
+        <title>Clinica San Pablo</title>
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <h1>Clinica San Pablo</h1>
+                <p>Tu salud, nuestra prioridad</p>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="#">Staff Médico</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Promociones</a></li>
+                    <li><a href="#">Contáctenos</a></li>
+                </ul>
+            </nav>
+            <main>
+                <article>
+                    <section class="cuerpo" id="presentacion">
+                        <div id="prese-nosotros">
+                            <h2>Siempre cerca de ti, cuando más nos necesitas.</h2>
+                            <p>Con más de 30 años de experiencia en el cuidado de la salud de millones de peruanos, en la Clínica San Pablo Surco, parte de la Red de Clínicas San Pablo, trabajamos día a día para poder ofrecer el servicio de calidad y seguridad que tu familia merece.</p>
+                            <p>Por tercera vez y de manera consecutiva, en mayo del 2024 la Clinica San Pablo Surco fue nuevamente acreditada por la Joint Commission International JCI, organismo líder mundial que certifica los estándares de excelencia en las instituciones de salud en el mundo.</p>
+                            <p>Con un staff de reconocidos médicos, en San Pablo Surco ofrecemos atención en todas las especialidades, avalados por equipos de última generación y la mejor infraestructura.</p>
+                        </div>
+                        <div>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ozrpWTW4VSc?si=5EB7j6iWAjt-putv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </section>
+                    <section class="cuerpo" id="promocion">
+                        <h2>Promociones Especiales de Septiembre</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Semanas</th>
+                                    <th>Lunes</th>
+                                    <th>Martes</th>
+                                    <th>Miércoles</th>
+                                    <th>Jueves</th>
+                                    <th>Viernes</th>
+                                    <th>Sábado</th>
+                                    <th>Domingo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Semana 1</td>
+                                    <td>Descuento en consulta de Medicina General</td>
+                                    <td></td>
+                                    <td>Descuento en consulta de Oftalmología</td>
+                                    <td>Descuento en consulta de Psicología</td>
+                                    <td></td>
+                                    <td>Descuento en fisioterapia</td>
+                                    <td>Descuento en exámenes de laboratorio</td>
+                                </tr>
+                                <tr>
+                                    <td>Semana 2</td>
+                                    <td></td>
+                                    <td>Descuento en consulta de Cardiología</td>
+                                    <td></td>
+                                    <td>Descuento en consulta de Endocrinología</td>
+                                    <td>Descuento en consulta de Psiquiatría</td>
+                                    <td>Descuento en chequeo de salud integral</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Semana 3</td>
+                                    <td>Descuento en consultas de Gastroenterología</td>
+                                    <td></td>
+                                    <td>Descuento en consulta de Neurología</td>
+                                    <td></td>
+                                    <td>Descuento en consulta de Pediatría</td>
+                                    <td></td>
+                                    <td>Descuento en análisis clínicos (sangre, orina, etc.)</td>
+                                </tr>
+                                <tr>
+                                    <td>Semana 4</td>
+                                    <td>Descuento en consultas de Geriatría</td>
+                                    <td>Descuento en consulta de Neumología</td>
+                                    <td>Descuento en consulta de Reumatología</td>
+                                    <td></td>
+                                    <td>Descuento en chequeo de salud femenina</td>
+                                    <td>Descuento en vacunas (niños y adultos)</td>
+                                    <td>Descuento en consultas de Medicina General</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section class="cuerpo" id="sugerencias">
+                        <div>
+                            <h2>Sugerencias</h2>
+                            <p>Déjanos tus sugerencias para mejorar nuestro servicio</p>
+                        </div>
+                        <form>
+                            <div class="form-group">
+                                <label for="nombre"></label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+
+                                <label for="email"></label>
+                                <input type="email" id="email" name="email" placeholder="Email">
+                            </div>
+                            <div>
+                                <label for="sugerencia"></label>
+                                <textarea name="sugerencia" id="sugerencia" placeholder="Escribe tu sugerencia aquí..."></textarea>
+                            </div>
+                        </form>
+                    </section>
+                </article>
+            </main>
+            <footer>
+                <section class="footer-section">
+                    <p>Información Legal</p>
+                    <ul>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                    </ul>
+                </section>
+                <section class="footer-section">
+                    <p>Sobre Nosotros</p>
+                    <ul>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Servicios</a></li>
+                    </ul>
+                </section>
+                <section class="footer-section">
+                    <p>Contáctanos</p>
+                    <ul>
+                        <li><a href="reclamaciones.html">Libro de Reclamaciones</a></li>
+                        <li><a href="#">Procedimiento de atención de Reclamos</a></li>
+                    </ul>
+                </section>
+                <section class="footer-section">
+                    <p>Redes Sociales</p>
+                    <ul>
+                        <li><a href="#"><img src="facebook-icon.png" alt="Facebook"></a></li>
+                        <li><a href="#"><img src="instagram-icon.png" alt="Instagram"></a></li>
+                        <li><a href="#"><img src="youtube-icon.png" alt="Youtube"></a></li>
+                        <li><a href="#"><img src="tiktok-icon.png" alt="TikTok"></a></li>
+                    </ul>
+                </section>
+            </footer>
+        </div>
+    </body>
+</html>

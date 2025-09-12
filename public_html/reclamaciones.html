@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Libro de Reclamaciones - Clínica San Pablo</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                background-color: #f5f8fc;
+                color: #333;
+            }
+
+            header {
+                background-color: #0077b6;
+                color: white;
+                padding: 20px;
+                text-align: center;
+                border-bottom: 5px solid #00b4d8;
+            }
+
+            header p {
+                margin: 5px 0;
+            }
+
+            main {
+                background-color: #ffffff;
+                margin: 20px auto;
+                padding: 20px;
+                max-width: 800px;
+                border-radius: 10px;
+                box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            }
+
+            fieldset {
+                border: 2px solid #90e0ef;
+                padding: 15px;
+                margin-bottom: 20px;
+                border-radius: 8px;
+                background-color: #f0f9ff;
+            }
+
+            legend {
+                font-weight: bold;
+                color: #0077b6;
+                padding: 0 10px;
+            }
+
+            label {
+                display: block;
+                margin-top: 10px;
+                font-weight: bold;
+                color: #333;
+            }
+
+            input[type="text"],
+            input[type="date"],
+            select,
+            textarea {
+                width: 100%;
+                padding: 8px;
+                margin-top: 5px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                font-size: 14px;
+            }
+
+            textarea {
+                resize: vertical;
+                height: 80px;
+            }
+
+            /* Opciones en línea para radios y checkboxes */
+            .opciones, .checks {
+                display: flex;
+                gap: 20px; /* separación entre opciones */
+                margin-top: 10px;
+                margin-bottom: 15px;
+                flex-wrap: wrap;
+            }
+
+            .opciones label,
+            .checks label {
+                display: inline-flex;
+                align-items: center;
+                gap: 5px;
+                font-weight: normal;
+            }
+
+            button {
+                background-color: #0077b6;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                font-size: 16px;
+                margin-top: 15px;
+                transition: 0.3s;
+            }
+
+            button:hover {
+                background-color: #0096c7;
+            }
+
+            footer {
+                background-color: #0077b6;
+                color: white;
+                text-align: center;
+                padding: 15px;
+                margin-top: 20px;
+                border-top: 5px solid #00b4d8;
+            }
+
+            footer p {
+                margin: 5px 0;
+            }
+        </style>
+    </head>
+    <body>
+
+        <header>
+            <h2>Libro de Reclamaciones</h2>
+            <p>Año: 2025 | Mes: Septiembre</p>
+            <p>Hoja de reclamación: N° 000000000000000001-2025</p>
+            <p>Clínica San Pablo | RUC: 20107463705</p>
+            <p>Dirección: Av. El Polo 789, Santiago de Surco</p>
+            <p>Código de autenticación: 20107463705 Clínica San Pablo S.A.C.</p>
+        </header>
+
+        <main>
+            <form>
+                <fieldset>
+                    <legend>1. Identificación del consumidor reclamante</legend>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="Inputnombre">
+
+                    <label for="domicilio">Domicilio:</label>
+                    <input type="text" id="domicilio" name="inputdomicilio">
+
+                    <label>Documento:</label>
+                    <div class="opciones">
+                        <label><input type="radio" name="documento" value="DNI"> DNI</label>
+                        <label><input type="radio" name="documento" value="CE"> CE</label>
+                    </div>
+                    <input type="text" name="nro_documento" placeholder="Número de documento">
+
+                    <label>Contacto:</label>
+                    <div class="opciones">
+                        <label><input type="radio" name="contacto" value="telefono"> Teléfono</label>
+                        <label><input type="radio" name="contacto" value="email"> Email</label>
+                    </div>
+                    <input type="text" name="dato_contacto" placeholder="Ingrese dato de contacto">
+
+                    <label for="edad">Edad:</label>
+                    <select name="edad" id="edad">
+                        <option value="menor">Menor de edad</option>
+                        <option value="mayor">Mayor de edad</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>2. Identificación del bien contratado</legend>
+                    <div class="checks">
+                        <label><input type="checkbox" name="tipo" value="Servicio"> Servicio</label>
+                        <label><input type="checkbox" name="tipo" value="Producto"> Producto</label>
+                    </div>
+
+                    <label for="monto">Monto reclamado:</label>
+                    <input type="text" id="monto" name="monto">
+
+                    <label for="desc_bien">Descripción:</label>
+                    <textarea id="desc_bien" name="desc_bien"></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend>3. Detalles de la reclamación</legend>
+                    <div class="opciones">
+                        <label><input type="radio" name="tipo_reclamo" value="Reclamo"> Reclamo</label>
+                        <label><input type="radio" name="tipo_reclamo" value="Queja"> Queja</label>
+                    </div>
+
+                    <label for="detalle">Descripción:</label>
+                    <textarea id="detalle" name="detalle"></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend>4. Observaciones del proveedor</legend>
+                    <label for="respuesta">Fecha de respuesta:</label>
+                    <input type="date" id="respuesta" name="respuesta">
+                </fieldset>
+
+                <button type="submit">Enviar Reclamo</button>
+            </form>
+        </main>
+
+        <footer>
+            <p><strong>Reclamo:</strong> Disconformidad relacionada a los productos o servicios.</p>
+            <p><strong>Queja:</strong> Malestar o descontento relacionado a la atención pública.</p>
+        </footer>
+
+    </body>
+</html>
