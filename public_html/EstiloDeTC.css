@@ -1,0 +1,44 @@
+body{
+    background-color: #ffffff;
+    font-family: arial sans-serif;
+
+}
+html{
+    background-color: #ffffff;
+}
+header{
+    background-color: #999999;
+    padding: 50px;
+    border: 1px solid;
+    padding: 20px;
+    width: 400PX;
+
+
+}
+.Hola1{
+ color: #ffffff;
+}
+main{
+    background-color: #ffffff;
+    font-family: arial  sans-serif;
+    border: 1px solid ;
+    stress: 1000;
+    text-indent: 12px;
+    width: 800px;
+    height: 800px;
+    padding: 50px;
+    
+}
+p{
+    margin: 20px;
+    
+}
+
+footer{
+    background-color: #999999;
+   width: 801px;
+    height: 20px;
+    padding: 52px;
+
+
+}
