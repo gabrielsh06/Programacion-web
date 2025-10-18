@@ -1,3 +1,6 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 /* --- Estilos del Encabezado Simple (Header) --- */
 .page-header-simple {
     background-color: #004080;  /* Fondo azul oscuro para el encabezado. */

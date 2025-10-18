@@ -1,7 +1,7 @@
 body{
     background-color: #ffffff;
-    font-family: arial sans-serif;
-
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
 }
 html{
     background-color: #ffffff;
@@ -11,7 +11,7 @@ header{
     padding: 50px;
     border: 1px solid;
     padding: 20px;
-    width: 400PX;
+    width: 55%;
 
 
 }
@@ -20,12 +20,10 @@ header{
 }
 main{
     background-color: #ffffff;
-    font-family: arial  sans-serif;
     border: 1px solid ;
-    stress: 1000;
     text-indent: 12px;
-    width: 800px;
-    height: 800px;
+    width: 55%;
+    height: 100%;
     padding: 50px;
     
 }
@@ -36,9 +34,17 @@ p{
 
 footer{
     background-color: #999999;
-   width: 801px;
+    width: 55%;
     height: 20px;
     padding: 52px;
 
 
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
 }

@@ -48,6 +48,18 @@ nav {
     margin-bottom: 30px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     transition: box-shadow 0.3s ease;
+    animation: nav ease-in-out;
+    animation-duration: 5s;
+    animation-timeline: 5s;
+}
+
+@keyframes nav{
+    0% {
+        transform: translateX(100%);
+    } 100% {
+        transform: translateX(0%);
+    }
+    
 }
 
 nav:hover {
