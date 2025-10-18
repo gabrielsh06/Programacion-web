@@ -4,28 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="recursos/SanPablo.png" type="image/x-icon">
+    <link rel="stylesheet" href="CSScontac.css">
     <title>Contacto | Clínica San Pablo</title>
 </head>
 
 <body>
     <div id="container">
         <header>
-            <h1>Clinica San Pablo</h1>
+            <h1><a href="index.html">Clinica San Pablo</a></h1>
             <p>Tu salud, nuestra prioridad</p>
         </header>
         <nav>
             <ul>
-                <li><a href="#">Staff Médico</a></li>
+                <li><a href="staffMedico.html">Staff Médico</a></li>
                 <li><a href="#">Nosotros</a></li>
                 <li><a href="#">Servicios</a></li>
-                <li><a href="#">Promociones</a></li>
-                <li><a href="#">Contáctenos</a></li>
+                <li><a href="procedimientos.html">Promociones</a></li>
+                <li><a href="contactenos.html">Contáctenos</a></li>
             </ul>
         </nav>
         <main>
             <h2>Contacto</h2>
-            <div>
-                <div>
+            <div id="contacto-container">
+                <div id="info">
                     <h3>Encuéntranos</h3>
                     <div>
                         <h4>Dirección:</h4>
@@ -35,9 +37,12 @@
                         <h4>Horario de atención de Central Telefónica:</h4>
                         <p>(01) 610-3333</p>
                     </div>
-                    <h3>Horario</h3>
+                    <div>
+                        <h4>Correo Electrónico:</h4>
+                        <p>contacto@clinicasanpablo.com</p>
+                    </div>
                 </div>
-                <div>
+                <div id="contacto-formulario">
                     <h3>Contacto con un asesor</h3>
                     <div>
                         <form>
@@ -52,11 +57,45 @@
 
                             <label for="correo">Correo</label>
                             <input type="email" name="inputCorreo" id="correo">
+
+                            <button>Enviar</button>
                         </form>
                     </div>
                 </div>
             </div>
         </main>
+        <footer>
+                <section class="footer-section">
+                    <p>Información Legal</p>
+                    <ul>
+                        <li><a href="terminosCondiciones.html">Términos y Condiciones</a></li>
+                        <li><a href="politicaPrivacidad.html">Política de Privacidad</a></li>
+                    </ul>
+                </section>
+                <section class="footer-section">
+                    <p>Sobre Nosotros</p>
+                    <ul>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Servicios</a></li>
+                    </ul>
+                </section>
+                <section class="footer-section">
+                    <p>Contáctanos</p>
+                    <ul>
+                        <li><a href="reclamaciones.html">Libro de Reclamaciones</a></li>
+                        <li><a href="procedimientos.html">Procedimiento de atención de Reclamos</a></li>
+                    </ul>
+                </section>
+                <section class="footer-section">
+                    <p>Redes Sociales</p>
+                    <ul>
+                        <li><a href="https://www.facebook.com/ClinicaSPablo"><img src="recursos/facebook.png" alt="Facebook"></a></li>
+                        <li><a href="https://www.tiktok.com/@red_sanpablo"><img src="recursos/instagram.png" alt="Instagram"></a></li>
+                        <li><a href="https://www.youtube.com/@red_sanpablo"><img src="recursos/youtube.png" alt="Youtube"></a></li>
+                        <li><a href="https://www.instagram.com/sanpablo_reddeclinicas"><img src="recursos/tik-tok.png" alt="TikTok"></a></li>
+                    </ul>
+                </section>
+            </footer>
     </div>
 </body>
 
