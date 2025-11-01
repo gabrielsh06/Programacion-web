@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="recursos/SanPablo.png" type="image/x-icon">
         <link href="CssDe_PaguinaIProcedimientoDeAtencionAlReclamo.css" rel="stylesheet" type="text/css"/>
+        <script src="JavaScrriptBotonI1I.js" type="text/javascript"></script>
         <title>Libro de Reclamaciones - Clínica San Pablo</title>
         <style>
             body {
@@ -146,14 +147,14 @@
                         <label><input type="radio" name="documento" value="DNI"> DNI</label>
                         <label><input type="radio" name="documento" value="CE"> CE</label>
                     </div>
-                    <input type="text" name="nro_documento" placeholder="Número de documento">
+                    <input type="text" id="docApartado" name="nro_documento" placeholder="Número de documento">
 
                     <label>Contacto:</label>
                     <div class="opciones">
                         <label><input type="radio" name="contacto" value="telefono"> Teléfono</label>
                         <label><input type="radio" name="contacto" value="email"> Email</label>
                     </div>
-                    <input type="text" name="dato_contacto" placeholder="Ingrese dato de contacto">
+                    <input id="contactable" type="text" name="dato_contacto" placeholder="Ingrese dato de contacto">
 
                     <label for="edad">Edad:</label>
                     <select name="edad" id="edad">
@@ -170,10 +171,10 @@
                     </div>
 
                     <label for="monto">Monto reclamado:</label>
-                    <input type="text" id="monto" name="monto">
+                    <input type="text" id="monto" name="monto1">
 
                     <label for="desc_bien">Descripción:</label>
-                    <textarea id="desc_bien" name="desc_bien"></textarea>
+                    <input type="text" id="desc_bien" name="desc_bienr">
                 </fieldset>
 
                 <fieldset>
@@ -184,16 +185,17 @@
                     </div>
 
                     <label for="detalle">Descripción:</label>
-                    <textarea id="detalle" name="detalle"></textarea>
+                    <textarea id="detalle" name="detaller"></textarea>
                 </fieldset>
 
                 <fieldset>
                     <legend>4. Observaciones del proveedor</legend>
                     <label for="respuesta">Fecha de respuesta:</label>
-                    <input type="date" id="respuesta" name="respuesta">
+                    <input type="date" id="respuesta" name="respuestar">
                 </fieldset>
 
-                <button type="submit">Enviar Reclamo</button>
+                <button type="button" onclick="Completado()">Enviar Reclamo</button>
+                <button type="button" onclick="Restaurador()">Restaurar</button>
             </form>
         </main>
 
@@ -201,6 +203,25 @@
             <p><strong>Reclamo:</strong> Disconformidad relacionada a los productos o servicios.</p>
             <p><strong>Queja:</strong> Malestar o descontento relacionado a la atención pública.</p>
         </footer>
-
+        <script>
+    function Restaurador(){
+        document.getElementById("nombre").value= ' ';
+        document.getElementById("domicilio").value= ' ';
+            document.getElementById("docApartado").value= ' ';
+             document.getElementById("contactable").value= ' ';
+        document.getElementById("edad").value= ' ';
+              document.getElementById("monto").value= ' ';
+              document.getElementById("desc_bien").value= ' ';  
+       document.getElementById("detalle").value= ' ';
+          document.getElementById("respuesta").value= ' ';
+      
+          //Trabajo casi echo (-_-)
+         
+   
+     
+    }
+    
+    
+        </script>
     </body>
 </html>
