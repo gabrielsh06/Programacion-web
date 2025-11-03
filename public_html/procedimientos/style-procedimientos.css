@@ -8,7 +8,10 @@ header{
     
 }
 
-
+header a {
+    text-decoration: none;
+    color: white;
+}
 
 .Animate1{
     color:#ffffff;

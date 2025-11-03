@@ -1,0 +1,564 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+body a {
+    text-decoration: none;
+    color: white;
+}
+
+#container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+header {
+    background: linear-gradient(90deg, #0066cc, #0099cc);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    transition: box-shadow 0.3s ease;
+}
+
+header:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+nav {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+    animation: nav 0.8s ease-in-out forwards;
+}
+
+@keyframes nav{
+    0% {
+        transform: translateX(50px);
+        opacity: 0;
+    } 100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}
+
+nav:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #e6f3ff;
+    color: #004080;
+}
+
+/* Estilos para el cuerpo-inicio */
+.cuerpo {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.cuerpo:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+/* Texto y video */
+#presentacion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#prese-nosotros {
+    flex: 1 1 400px;
+}
+
+#presentacion iframe {
+    max-width: 100%;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+#presentacion iframe:hover {
+    box-shadow: 0 0 15px rgba(0, 102, 204, 0.2);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table thead {
+    background-color: #0066cc;
+    color: white;
+}
+
+table th,
+table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tbody tr:hover {
+    background-color: #e6f3ff;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Estilos para el cuerpo-staffMedico */
+.cuerpo {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.cuerpo:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.medico {
+    text-align: center;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+.medico:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.medico img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+/* Estilos para el cuerpo-servicios */
+#servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 10px;
+  }
+  
+  .servicio-card {
+    background-color: #f0f8ff;
+    border: 1px solid #cce6ff;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .servicio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 102, 204, 0.15);
+  }
+  
+  .servicio-card img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 10px;
+  }
+  
+  .servicio-card h3 {
+    color: #004080;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+  
+  .servicio-card p {
+    font-size: 0.95rem;
+  }
+
+/* Estilos para el cuerpo-promociones */
+
+.cuerpo {
+    background-color: #ffffff; /* Fondo blanco para las cajas de contenido. */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+#promociones-grid {
+    display: grid; /* Usa la maquetación de grid. */
+    /* Crea columnas flexibles que se ajustan automáticamente, con un mínimo de 300px. */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 25px; /* Espacio entre las tarjetas. */
+    margin-top: 20px;
+}
+
+.promo-card {
+    background-color: #f0f8ff; /* Fondo azul muy claro para la tarjeta. */
+    border: 1px solid #cce6ff;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Organiza contenido verticalmente (título, texto, descuento, botón). */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos. */
+    min-height: 250px; /* Altura mínima para uniformidad. */
+}
+
+.promo-card:hover {
+    transform: translateY(-5px); /* Desplaza la tarjeta ligeramente hacia arriba al hacer hover. */
+    box-shadow: 0 8px 20px rgba(0, 102, 204, 0.15); /* Sombra azul al hacer hover. */
+}
+
+.promo-card h3 {
+    color: #004080;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.promo-card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+ 
+.promo-card .descuento {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #cc0000; /* Color rojo de alerta/descuento. */
+    margin: 10px 0;
+}
+
+.promo-card button {
+    background-color: #ff8c00;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    text-transform: uppercase;
+    margin-top: auto; 
+}
+
+.promo-card button:hover {
+    background-color: #e57e00;
+    transform: scale(1.02);
+}
+
+
+.promo-card.destacada {
+    background-color: #0066cc;
+    color: white;
+}
+
+.promo-card.destacada h3,
+.promo-card.destacada p {
+    color: white;
+}
+
+.promo-card.destacada .descuento {
+     color: #ffff00;
+}
+
+.promo-card.destacada button {
+    background-color: #ffffff;
+    color: #0066cc;
+}
+ 
+.promo-card.destacada button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Estilos para el cuerpo-politica-privacidad */
+.page-header-simple h1 {
+    font-size: 2rem; /* Tamaño de fuente grande para el título principal. */
+    margin-bottom: 5px; /* Pequeño margen debajo del título. */
+}
+
+.page-header-simple p {
+    font-size: 1rem; /* Tamaño de fuente estándar para el subtítulo. */
+    margin-bottom: 15px; /* Margen debajo del subtítulo. */
+}
+
+/* --- Estilos del Enlace de Retorno (Botón) --- */
+.page-header-simple .back-link {
+    color: #cce6ff; /* Color de texto azul muy claro. */
+    text-decoration: none; /* Quita el subrayado. */
+    font-weight: bold; /* Texto en negrita. */
+    display: inline-block; /* Permite aplicar padding y border. */
+    padding: 5px 10px; /* Espaciado interno para dar forma de botón. */
+    border: 1px solid #cce6ff; /* Borde delgado. */
+    border-radius: 5px; /* Esquinas redondeadas. */
+    transition: background-color 0.3s; /* Transición suave de 0.3 segundos. */
+}
+
+.page-header-simple .back-link:hover {
+    background-color: #0066cc; /* Fondo azul principal al pasar el ratón. */
+    color: white; /* Color de texto blanco al pasar el ratón. */
+}
+
+/* --- Estilos del Contenedor Principal (MAIN) --- */
+.page-main-content {
+    background-color: #f9f9f9; /* Fondo gris claro (para que el contenido blanco resalte). */
+    margin: 20px auto; /* Centra el contenido y añade margen vertical. */
+    padding: 0 20px; /* Relleno lateral. */
+    max-width: 900px; /* Limita el ancho del texto para mejor lectura. */
+}
+
+/* --- Estilos del Cuerpo del Documento Legal --- */
+.cuerpo-legal {
+    background-color: #ffffff; /* Fondo de la caja de contenido blanco. */
+    padding: 30px; /* Relleno interno de la caja. */
+    border-radius: 8px; /* Esquinas redondeadas. */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para efecto flotante. */
+}
+
+.cuerpo-legal h2 {
+    color: #004080; /* Color de título principal de la sección. */
+    font-size: 1.8rem; /* Tamaño de fuente grande. */
+    border-bottom: 3px solid #e6f3ff; /* Línea de separación debajo del título. */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.cuerpo-legal h3 {
+    color: #0066cc; /* Color azul principal para los subtítulos. */
+    font-size: 1.3rem;
+    margin-top: 25px; /* Espacio antes de cada subtítulo. */
+}
+
+/* Estilos para el cuerpo-nosotros */
+#nosotros-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.nosotros-texto {
+    font-size: 1rem;
+}
+
+iframe {
+    width: 100%;
+    height: 315px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+iframe:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos para el cuerpo-contacto*/
+#contacto-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+}
+#contacto-container h3 {
+    color: #0066cc;
+    margin-bottom: 15px;
+}
+
+#info {
+    padding: 20px;
+    width: 45%;
+}
+#contacto-formulario {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+#contacto-formulario label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+#contacto-formulario input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#contacto-formulario button {
+    padding: 10px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Estilos para el footer */
+footer {
+    background-color: #0066cc;
+    color: white;
+    padding: 40px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    transition: transform 0.3s ease;
+}
+
+.footer-section:hover {
+    transform: translateY(-2px);
+}
+
+.footer-section p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #cce6ff;
+    text-decoration: underline;
+}
+
+.footer-section ul li img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.footer-section ul li img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    #presentacion {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
