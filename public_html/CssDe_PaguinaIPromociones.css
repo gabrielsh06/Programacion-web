@@ -1,0 +1,229 @@
+/* --- Estilos generales (aplicados a todas las páginas) --- */
+* {
+    margin: 0; /* Elimina márgenes predeterminados. */
+    padding: 0; /* Elimina relleno predeterminado. */
+    box-sizing: border-box; /* Asegura que padding y borde se incluyan en el ancho/alto total. */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define la fuente. */
+    line-height: 1.6; /* Espaciado entre líneas. */
+    background-color: #f9f9f9; /* Fondo gris claro. */
+    color: #333; /* Color de texto principal gris oscuro. */
+}
+
+#container {
+    max-width: 1200px; /* Ancho máximo para el contenedor del contenido principal. */
+    margin: auto; /* Centra el contenedor en la página. */
+    padding: 20px; /* Relleno alrededor del contenido. */
+}
+
+/* --- Header (index.html) --- */
+header {
+    background: linear-gradient(90deg, #0066cc, #0099cc); /* Fondo degradado azul. */
+    color: white; /* Texto blanco. */
+    text-align: center; /* Centra el contenido. */
+    padding: 40px 20px; /* Espaciado interno amplio. */
+    border-radius: 10px; /* Esquinas redondeadas. */
+    margin-bottom: 30px; /* Espacio debajo del header. */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave. */
+}
+
+header h1 {
+    font-size: 2.8rem; /* Tamaño grande para el título principal. */
+    margin-bottom: 10px;
+}
+
+/* --- Navegación (NAV) --- */
+nav {
+    background-color: #ffffff; /* Fondo blanco. */
+    border: 1px solid #ddd; /* Borde delgado. */
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Sombra sutil. */
+}
+
+nav ul {
+    list-style: none; /* Quita los puntos de lista. */
+    display: flex; /* Permite que los ítems estén en línea. */
+    flex-wrap: wrap; /* Permite salto de línea en móvil. */
+    justify-content: center; /* Centra los enlaces. */
+    padding: 10px;
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+nav ul li a {
+    text-decoration: none; /* Quita el subrayado del enlace. */
+    color: #0066cc; /* Color azul principal. */
+    font-weight: bold;
+    padding: 8px 16px; /* Área de clic para el enlace. */
+    border-radius: 6px;
+    transition: background 0.3s ease, color 0.3s ease; /* Transición suave. */
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #e6f3ff; /* Fondo claro al pasar el ratón o si está activo. */
+    color: #004080;
+}
+
+/* --- Contenido Principal Genérico (para secciones) --- */
+.cuerpo {
+    background-color: #ffffff; /* Fondo blanco para las cajas de contenido. */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+/* --- Estilos para la sección de Promociones (Grid de Cards) --- */
+#promociones-grid {
+    display: grid; /* Usa la maquetación de grid. */
+    /* Crea columnas flexibles que se ajustan automáticamente, con un mínimo de 300px. */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 25px; /* Espacio entre las tarjetas. */
+    margin-top: 20px;
+}
+
+.promo-card {
+    background-color: #f0f8ff; /* Fondo azul muy claro para la tarjeta. */
+    border: 1px solid #cce6ff;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Organiza contenido verticalmente (título, texto, descuento, botón). */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos. */
+    min-height: 250px; /* Altura mínima para uniformidad. */
+}
+
+.promo-card:hover {
+    transform: translateY(-5px); /* Desplaza la tarjeta ligeramente hacia arriba al hacer hover. */
+    box-shadow: 0 8px 20px rgba(0, 102, 204, 0.15); /* Sombra azul al hacer hover. */
+}
+
+.promo-card h3 {
+    color: #004080;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.promo-card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+ 
+.promo-card .descuento {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #cc0000; /* Color rojo de alerta/descuento. */
+    margin: 10px 0;
+}
+
+.promo-card button {
+    background-color: #ff8c00; /* Fondo naranja para el botón de llamada a la acción (CTA). */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    text-transform: uppercase;
+    margin-top: auto; /* Empuja el botón al fondo de la tarjeta (gracias a flex-direction: column). */
+}
+
+.promo-card button:hover {
+    background-color: #e57e00; /* Naranja oscuro al pasar el ratón. */
+    transform: scale(1.02); /* Agranda ligeramente el botón al hacer hover. */
+}
+
+/* --- Estilo para la promoción destacada (tarjeta con tema invertido) --- */
+.promo-card.destacada {
+    background-color: #0066cc; /* Fondo azul principal. */
+    color: white;
+}
+
+.promo-card.destacada h3,
+.promo-card.destacada p {
+    color: white;
+}
+
+.promo-card.destacada .descuento {
+     color: #ffff00; /* Amarillo brillante para el descuento. */
+}
+
+.promo-card.destacada button {
+    background-color: #ffffff; /* Botón blanco. */
+    color: #0066cc; /* Texto azul. */
+}
+ 
+.promo-card.destacada button:hover {
+    background-color: #f0f0f0;
+}
+
+/* --- Footer (index.html) --- */
+footer {
+    background-color: #0066cc; /* Fondo azul principal. */
+    color: white;
+    padding: 40px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between; /* Distribuye el espacio entre las secciones del footer. */
+}
+
+.footer-section {
+    flex: 1 1 200px; /* Permite a las secciones del footer ser flexibles con un mínimo de 200px de ancho. */
+}
+
+.footer-section p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.footer-section ul li a:hover {
+    color: #cce6ff;
+    text-decoration: underline;
+}
+
+.footer-section ul li img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* --- Media Queries (Responsividad para Móviles) --- */
+@media (max-width: 768px) {
+    /* Aplica estos estilos cuando el ancho de la pantalla sea de 768px o menos */
+    nav ul {
+        flex-direction: column; /* Apila los enlaces de la navegación verticalmente. */
+        align-items: center;
+    }
+
+    footer {
+        flex-direction: column; /* Apila las secciones del footer verticalmente. */
+        align-items: center;
+        text-align: center;
+    }
+}

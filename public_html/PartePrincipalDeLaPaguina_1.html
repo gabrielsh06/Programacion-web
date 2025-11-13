@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="recursos/SanPablo.png" type="image/x-icon">
+        <link rel="stylesheet" href="CssDe_PartePrincipalDeLaPaguina.css">
+        <title>Clínica San Pablo</title>
+        <script>
+      
+        </script>
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <h1>Clinica San Pablo</h1>
+                <p>Tu salud, nuestra prioridad</p>
+            </header>
+            <nav>
+                <ul>
+
+                    <li><a href="#">Fuentes </a></li>
+                    <li><a href="PaguinaIStaffMedico.html">Staff Medio</a></li>
+                    <li> <a href="PaguinaINosotros.html">Nosotros </a></li>
+                    <li><a href="PaguinaIServicios.html">Servicios</a><li>
+                    <li> <a href="PaguinaIPromociones.html">Promociones</a></li>
+                    <li>          <a href="PaguinaIContactenos.html">Contactenos </a></li>
+          
+                 
+                 
+                </ul>
+            </nav>
+            <main>
+                <article>
+                    <section class="cuerpo" id="presentacion">
+                        <div id="prese-nosotros">
+                            <h2>Siempre cerca de ti, cuando más nos necesitas.</h2>
+                            <p>Con más de 30 años de experiencia en el cuidado de la salud de millones de peruanos, en la Clínica San Pablo Surco, parte de la Red de Clínicas San Pablo, trabajamos día a día para poder ofrecer el servicio de calidad y seguridad que tu familia merece.</p>
+                            <p>Por tercera vez y de manera consecutiva, en mayo del 2024 la Clinica San Pablo Surco fue nuevamente acreditada por la Joint Commission International JCI, organismo líder mundial que certifica los estándares de excelencia en las instituciones de salud en el mundo.</p>
+                            <p>Con un staff de reconocidos médicos, en San Pablo Surco ofrecemos atención en todas las especialidades, avalados por equipos de última generación y la mejor infraestructura.</p>
+                        </div>
+                        <div>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ozrpWTW4VSc?si=5EB7j6iWAjt-putv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </section>
+                    <section class="cuerpo" id="promocion">
+                        <h2>Promociones Especiales de Septiembre</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Semanas</th>
+                                    <th>Lunes</th>
+                                    <th>Martes</th>
+                                    <th>Miércoles</th>
+                                    <th>Jueves</th>
+                                    <th>Viernes</th>
+                                    <th>Sábado</th>
+                                    <th>Domingo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Semana 1</td>
+                                    <td>Descuento en consulta de Medicina General</td>
+                                    <td></td>
+                                    <td>Descuento en consulta de Oftalmología</td>
+                                    <td>Descuento en consulta de Psicología</td>
+                                    <td></td>
+                                    <td>Descuento en fisioterapia</td>
+                                    <td>Descuento en exámenes de laboratorio</td>
+                                </tr>
+                                <tr>
+                                    <td>Semana 2</td>
+                                    <td></td>
+                                    <td>Descuento en consulta de Cardiología</td>
+                                    <td></td>
+                                    <td>Descuento en consulta de Endocrinología</td>
+                                    <td>Descuento en consulta de Psiquiatría</td>
+                                    <td>Descuento en chequeo de salud integral</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Semana 3</td>
+                                    <td>Descuento en consultas de Gastroenterología</td>
+                                    <td></td>
+                                    <td>Descuento en consulta de Neurología</td>
+                                    <td></td>
+                                    <td>Descuento en consulta de Pediatría</td>
+                                    <td></td>
+                                    <td>Descuento en análisis clínicos (sangre, orina, etc.)</td>
+                                </tr>
+                                <tr>
+                                    <td>Semana 4</td>
+                                    <td>Descuento en consultas de Geriatría</td>
+                                    <td>Descuento en consulta de Neumología</td>
+                                    <td>Descuento en consulta de Reumatología</td>
+                                    <td></td>
+                                    <td>Descuento en chequeo de salud femenina</td>
+                                    <td>Descuento en vacunas (niños y adultos)</td>
+                                    <td>Descuento en consultas de Medicina General</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section class="cuerpo" id="sugerencias">
+                        <div>
+                            <h2>Sugerencias</h2>
+                            <p>Déjanos tus sugerencias para mejorar nuestro servicio</p>
+                        </div>
+                        <form>
+                            <div class="form-group">
+                                <label for="nombre"></label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+
+                                <label for="email"></label>
+                                <input type="email" id="email" name="email" placeholder="Email">
+                            </div>
+                            <div>
+                                <label for="sugerencia"></label>
+                                <textarea name="sugerencia" id="sugerencia" placeholder="Escribe tu sugerencia aquí..."></textarea>
+
+                            </div>
+                            <div>
+                                <button type="button" onclick="Comprobacion()" >Entregar</button>
+                                <button type="button" onclick="ISEmptty()" >Restablecer</button>
+                            </div>
+                        </form>
+                    </section>
+                    <div>
+                        <p id="N1"></p>
+                    </div>
+                </article>
+            </main>
+            <footer>
+                <section class="footer-section">
+                    <p>Información Legal</p>
+                    <ul>
+                        <li><a href="PaguinaITerminosYCondiciones.html">Términos y Condiciones</a></li>
+                        <li><a href="PaguinaIPoliticaDePrivacidad.html">Politicas de privacidad</a></li>
+
+                    </ul>
+                </section>
+                <section class="footer-section">
+                    <p>Sobre Nosotros</p>
+                    <ul>
+                        <li><a href="PaguinaINosotros.html">Nosotros </a></li>
+                        <li><a href="PaguinaIServicios.html"></a></li>
+
+                    </ul>
+                </section>
+                <section class="footer-section">
+                    <p>Contáctanos</p>
+                    <ul>
+                        <li><a href="PaguinaILibroDeReclamaciones.html">Libro de Reclamaciones </a></li>
+                        <li>   <a href="PaguinaIProcedimientoDeAtencionAlReclamo.html">Procedimiento de atencion al reclamo</a>  </li>
+
+
+                    </ul>
+                </section>
+                <section class="footer-section">
+                    <p>Redes Sociales</p>
+                    <ul>
+                        <li><a href="https://www.facebook.com/ClinicaSPablo"><img src="recursos/facebook.png" alt="Facebook"></a></li>
+                        <li><a href="https://www.tiktok.com/@red_sanpablo"><img src="recursos/instagram.png" alt="Instagram"></a></li>
+                        <li><a href="https://www.youtube.com/@red_sanpablo"><img src="recursos/youtube.png" alt="Youtube"></a></li>
+                        <li><a href="https://www.instagram.com/sanpablo_reddeclinicas"><img src="recursos/tik-tok.png" alt="TikTok"></a></li>
+                    </ul>
+                </section>
+            </footer>
+        </div>
+        <script>
+            let nombre = document.getElementById("nombre");
+            let email = document.getElementById("email");
+            let sugerencia = document.getElementById("sugerencia");
+            function Comprobacion() {
+                console.log('Exito');
+                if (nombre.value !== "" || email.value !== "" || sugerencia.value !== "") {
+                    document.getElementById("N1").innerHTML = 'Entrega exitosa';
+
+                }
+            }
+
+            function ISEmptty() {  
+ 
+                document.getElementById("sugerencia").value = ' ';
+                     document.getElementById("email").value = ' ';
+                          document.getElementById("nombre").value = ' ';
+                      
+
+            }
+
+
+
+
+
+        </script>
+    </body>
+</html>

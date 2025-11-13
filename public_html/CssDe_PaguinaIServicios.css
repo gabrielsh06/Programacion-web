@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  #container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* --- Header --- */
+  header {
+    background: linear-gradient(90deg, #0066cc, #0099cc);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+  
+  /* --- Navegación --- */
+  nav {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  nav ul li {
+    margin: 10px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  nav ul li a:hover,
+  nav ul li a.active {
+    background-color: #e6f3ff;
+    color: #004080;
+  }
+  
+  /* --- Sección Servicios --- */
+  .cuerpo {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+  }
+  
+  .cuerpo h2 {
+    color: #0066cc;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .cuerpo p {
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+  
+  /* --- Grid de Servicios --- */
+  #servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 10px;
+  }
+  
+  .servicio-card {
+    background-color: #f0f8ff;
+    border: 1px solid #cce6ff;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .servicio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 102, 204, 0.15);
+  }
+  
+  .servicio-card img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 10px;
+  }
+  
+  .servicio-card h3 {
+    color: #004080;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+  
+  .servicio-card p {
+    font-size: 0.95rem;
+  }
+  
+  /* --- Footer --- */
+  footer {
+    background-color: #0066cc;
+    color: white;
+    padding: 40px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+  }
+  
+  .footer-section {
+    flex: 1 1 200px;
+  }
+  
+  .footer-section p {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #cce6ff;
+    text-decoration: underline;
+  }
+  
+  .footer-section ul li img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-section ul li img:hover {
+    transform: scale(1.1);
+  }
+  
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #servicios-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  
