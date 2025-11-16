@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="recursos/SanPablo.png" type="image/x-icon">
+        <script src="scripts.js" defer></script>
         <title>Libro de Reclamaciones - Clínica San Pablo</title>
         <style>
             body {
@@ -131,7 +132,7 @@
         </header>
 
         <main>
-            <form>
+            <form id="form-reclamaciones">
                 <fieldset>
                     <legend>1. Identificación del consumidor reclamante</legend>
                     <label for="nombre">Nombre:</label>
@@ -185,21 +186,17 @@
                     <label for="detalle">Descripción:</label>
                     <textarea id="detalle" name="detalle"></textarea>
                 </fieldset>
-
                 <fieldset>
                     <legend>4. Observaciones del proveedor</legend>
                     <label for="respuesta">Fecha de respuesta:</label>
                     <input type="date" id="respuesta" name="respuesta">
                 </fieldset>
-
-                <button type="submit">Enviar Reclamo</button>
+                <button type="reset" id="btn-reclamaciones">Enviar Reclamo</button>
             </form>
         </main>
-
         <footer>
             <p><strong>Reclamo:</strong> Disconformidad relacionada a los productos o servicios.</p>
             <p><strong>Queja:</strong> Malestar o descontento relacionado a la atención pública.</p>
         </footer>
-
     </body>
 </html>

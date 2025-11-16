@@ -5,18 +5,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="recursos/SanPablo.png" type="image/x-icon">
         <link rel="stylesheet" href="style-inicio.css">
+        <Script src="scripts.js" defer></Script>
         <title>Clínica San Pablo</title>
     </head>
     <body>
         <div id="container">
             <header>
-                <h1>Clinica San Pablo</h1>
+                <h1>Clínica San Pablo</h1>
                 <p>Tu salud, nuestra prioridad</p>
             </header>
             <nav>
                 <ul>
                     <li><a href="staff-medico.html">Staff Médico</a></li>
-                    <li><a href="Nosotros.html">Nosotros</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
                     <li><a href="servicios.html">Servicios</a></li>
                     <li><a href="promociones.html">Promociones</a></li>
                     <li><a href="contactenos.html">Contáctenos</a></li>
@@ -99,7 +100,7 @@
                             <h2>Sugerencias</h2>
                             <p>Déjanos tus sugerencias para mejorar nuestro servicio</p>
                         </div>
-                        <form>
+                        <form id="form-sugerencias">
                             <div class="form-group">
                                 <label for="nombre"></label>
                                 <input type="text" id="nombre" name="nombre" placeholder="Nombre">
@@ -111,6 +112,9 @@
                                 <label for="sugerencia"></label>
                                 <textarea name="sugerencia" id="sugerencia" placeholder="Escribe tu sugerencia aquí..."></textarea>
                             </div>
+                            <div>
+                                <button type="button" id="btn-sugerencias">Enviar</button>
+                            </div>
                         </form>
                     </section>
                 </article>
@@ -119,15 +123,15 @@
                 <section class="footer-section">
                     <p>Información Legal</p>
                     <ul>
-                        <li><a href="terminosCondiciones.html">Términos y Condiciones</a></li>
+                        <li><a href="terminos-condiciones.html">Términos y Condiciones</a></li>
                         <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
                     </ul>
                 </section>
                 <section class="footer-section">
                     <p>Sobre Nosotros</p>
                     <ul>
-                        <li><a href="Nosotros.html">Nosotros</a></li>
-                        <li><a href="Servicios.html">Servicios</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
                     </ul>
                 </section>
                 <section class="footer-section">
