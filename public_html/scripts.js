@@ -1,12 +1,5 @@
-
-const formSugerencia = document.querySelector("#form-sugerencias");
-const btnSugerencia = document.querySelector("#btn-sugerencias")
+const formSugerencia = document.querySelector("#form-sugerencias"); // Selecciona el formulario de sugerencias
+const btnSugerencia = document.querySelector("#btn-sugerencias") // Selecciona el botón de enviar sugerencias
 btnSugerencia.addEventListener('click', () => {
-    formSugerencia.reset();
-});
-
-const formContacto = document.querySelector("#form-contacto");
-const btnContacto = document.querySelector("#btn-contac");
-btnContacto.addEventListener('click', () => {
-    formContacto.reset();
+    formSugerencia.reset(); // Reinicia el formulario al hacer clic en el botón
 });
