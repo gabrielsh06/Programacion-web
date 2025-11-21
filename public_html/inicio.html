@@ -6,7 +6,6 @@
         <link rel="shortcut icon" href="recursos/SanPablo.png" type="image/x-icon">
         <link rel="stylesheet" href="style-inicio.css">
         <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.5.7/dist/sweetalert2.min.css" rel="stylesheet">
-        <script src="scripts.js" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <title>Clínica San Pablo</title>
     </head>
@@ -154,27 +153,6 @@
                 </section>
             </footer>
         </div>
-        <script>
-            const btnSuge = document.querySelector("#btn-sugerencias");
-            btnSuge.addEventListener("click", () => {
-                const nombre = document.querySelector("#nombre-suge").value.trim(); // Obtengo el valor
-                const email = document.querySelector("#email-suge").value.trim(); // Obtengo el valor
-                const sugerencia = document.querySelector("#sugerencia").value.trim(); // Obtengo el valor
-
-                if (nombre === "" || email === "" || sugerencia === "") { // Verifico si están vacíos
-                    Swal.fire({
-                        icon: "error",
-                        title: "Compos incompletos",
-                        text: "Por favor completa todos los campos"
-                    });
-                    return;
-                }
-                Swal.fire({ // Muestro el mensaje de éxito
-                    icon: "success",
-                    title: "Enviado correctamente",
-                    text: "Gracias por enviar tus sugerencias"
-                });
-            });
-        </script>
+        <script src="scripts.js" defer></script>
     </body>
 </html>
