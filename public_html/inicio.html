@@ -105,10 +105,10 @@
                         <form id="form-sugerencias">
                             <div class="form-group">
                                 <label for="nombre"></label>
-                                <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+                                <input type="text" id="nombre-suge" name="nombre" placeholder="Nombre">
 
                                 <label for="email"></label>
-                                <input type="email" id="email" name="email" placeholder="Email">
+                                <input type="email" id="email-suge" name="email" placeholder="Email">
                             </div>
                             <div>
                                 <label for="sugerencia"></label>
@@ -157,8 +157,8 @@
         <script>
             const btnSuge = document.querySelector("#btn-sugerencias");
             btnSuge.addEventListener("click", () => {
-                const nombre = document.querySelector("#nombre").value.trim(); // Obtengo el valor
-                const email = document.querySelector("#email").value.trim(); // Obtengo el valor
+                const nombre = document.querySelector("#nombre-suge").value.trim(); // Obtengo el valor
+                const email = document.querySelector("#email-suge").value.trim(); // Obtengo el valor
                 const sugerencia = document.querySelector("#sugerencia").value.trim(); // Obtengo el valor
 
                 if (nombre === "" || email === "" || sugerencia === "") { // Verifico si están vacíos
@@ -169,11 +169,10 @@
                     });
                     return;
                 }
-
                 Swal.fire({ // Muestro el mensaje de éxito
                     icon: "success",
                     title: "Enviado correctamente",
-                    text: "Tu formulario fue enviado"
+                    text: "Gracias por enviar tus sugerencias"
                 });
             });
         </script>
