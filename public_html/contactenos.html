@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="recursos/SanPablo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.5.7/dist/sweetalert2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style-inicio.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Contacto | Clínica San Pablo</title>
 </head>
 
@@ -47,56 +49,88 @@
                     <div>
                         <form id="form-contacto">
                             <label for="nombre">Nombre</label>
-                            <input type="text" name="inputNombre" id="nombre">
+                            <input type="text" id="nombre-cont" name="inputNombre" id="nombre">
 
                             <label for="apellido">Apellido</label>
-                            <input type="text" name="inputApellido" id="apellido">
+                            <input type="text" id="apellido-cont" name="inputApellido" id="apellido">
 
                             <label for="celular">Celular</label>
-                            <input type="text" name="inputCelular" id="celular">
+                            <input type="text" id="celular-cont" name="inputCelular" id="celular">
 
                             <label for="correo">Correo</label>
-                            <input type="email" name="inputCorreo" id="correo">
+                            <input type="email" id="correo-cont" name="inputCorreo" id="correo">
 
                             <button type="button" class="btn-enviar" id="btn-contac">Enviar</button>
                         </form>
                     </div>
                 </div>
             </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d16336.17039227284!2d-76.971322!3d-12.100168!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c7a4fb8382b1%3A0xc3abfb9a96a8b94b!2sCl%C3%ADnica%20San%20Pablo!5e1!3m2!1ses!2sus!4v1760795370686!5m2!1ses!2sus" width="100%" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d16336.17039227284!2d-76.971322!3d-12.100168!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c7a4fb8382b1%3A0xc3abfb9a96a8b94b!2sCl%C3%ADnica%20San%20Pablo!5e1!3m2!1ses!2sus!4v1760795370686!5m2!1ses!2sus"
+                width="100%" height="400px" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </main>
         <footer>
-                <section class="footer-section">
-                    <p>Información Legal</p>
-                    <ul>
-                        <li><a href="terminos-condiciones.html">Términos y Condiciones</a></li>
-                        <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
-                    </ul>
-                </section>
-                <section class="footer-section">
-                    <p>Sobre Nosotros</p>
-                    <ul>
-                        <li><a href="nosotros.html">Nosotros</a></li>
-                        <li><a href="servicios.html">Servicios</a></li>
-                    </ul>
-                </section>
-                <section class="footer-section">
-                    <p>Contáctanos</p>
-                    <ul>
-                        <li><a href="reclamaciones.html">Libro de Reclamaciones</a></li>
-                        <li><a href="procedimientos.html">Procedimiento de atención de Reclamos</a></li>
-                    </ul>
-                </section>
-                <section class="footer-section">
-                    <p>Redes Sociales</p>
-                    <ul>
-                        <li><a href="https://www.facebook.com/ClinicaSPablo"><img src="recursos/facebook.png" alt="Facebook"></a></li>
-                        <li><a href="https://www.tiktok.com/@red_sanpablo"><img src="recursos/instagram.png" alt="Instagram"></a></li>
-                        <li><a href="https://www.youtube.com/@red_sanpablo"><img src="recursos/youtube.png" alt="Youtube"></a></li>
-                        <li><a href="https://www.instagram.com/sanpablo_reddeclinicas"><img src="recursos/tik-tok.png" alt="TikTok"></a></li>
-                    </ul>
-                </section>
-            </footer>
+            <section class="footer-section">
+                <p>Información Legal</p>
+                <ul>
+                    <li><a href="terminos-condiciones.html">Términos y Condiciones</a></li>
+                    <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                </ul>
+            </section>
+            <section class="footer-section">
+                <p>Sobre Nosotros</p>
+                <ul>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                </ul>
+            </section>
+            <section class="footer-section">
+                <p>Contáctanos</p>
+                <ul>
+                    <li><a href="reclamaciones.html">Libro de Reclamaciones</a></li>
+                    <li><a href="procedimientos.html">Procedimiento de atención de Reclamos</a></li>
+                </ul>
+            </section>
+            <section class="footer-section">
+                <p>Redes Sociales</p>
+                <ul>
+                    <li><a href="https://www.facebook.com/ClinicaSPablo"><img src="recursos/facebook.png"
+                                alt="Facebook"></a></li>
+                    <li><a href="https://www.tiktok.com/@red_sanpablo"><img src="recursos/instagram.png"
+                                alt="Instagram"></a></li>
+                    <li><a href="https://www.youtube.com/@red_sanpablo"><img src="recursos/youtube.png"
+                                alt="Youtube"></a></li>
+                    <li><a href="https://www.instagram.com/sanpablo_reddeclinicas"><img src="recursos/tik-tok.png"
+                                alt="TikTok"></a></li>
+                </ul>
+            </section>
+        </footer>
     </div>
+    <script>
+        const btnCont = document.querySelector("#btn-contac");
+        btnCont.addEventListener("click", () => {
+            const nombre = document.querySelector("#nombre-cont").value.trim(); // Obtengo el valor
+            const apellido = document.querySelector("#apellido-cont").value.trim(); // Obtengo el valor
+            const celular = document.querySelector("#celular-cont").value.trim(); // Obtengo el valor
+            const correo = document.querySelector("#correo-cont").value.trim(); // Obtengo el valor
+
+            if (nombre === "" || apellido === "" || celular === "" || correo === "") { // Verifico si están vacíos
+                Swal.fire({
+                    icon: "error",
+                    title: "Compos incompletos",
+                    text: "Por favor completa todos los campos"
+                });
+                return;
+            }
+
+            Swal.fire({
+                icon: "success",
+                title: "Eviado Correctamente",
+                text: "Pronto un asesor se contactara con usted"
+            });
+        });
+    </script>
 </body>
+
 </html>
