@@ -20,7 +20,10 @@
                 text-align: center;
                 border-bottom: 5px solid #00b4d8;
             }
-
+            header h2 a {
+                text-decoration: none;
+                color: white;
+            }
             header p {
                 margin: 5px 0;
             }
@@ -118,11 +121,13 @@
                 margin: 5px 0;
             }
         </style>
+        <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.5.7/dist/sweetalert2.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </head>
     <body>
 
         <header>
-            <h2>Libro de Reclamaciones</h2>
+            <h2><a href="inicio.html">Libro de Reclamaciones</a></h2>
             <p>Año: 2025 | Mes: Septiembre</p>
             <p>Hoja de reclamación: N° 000000000000000001-2025</p>
             <p>Clínica San Pablo | RUC: 20107463705</p>
@@ -190,12 +195,13 @@
                     <label for="respuesta">Fecha de respuesta:</label>
                     <input type="date" id="respuesta" name="respuesta">
                 </fieldset>
-                <button type="reset" class="btn-enviar" id="btn-reclamaciones">Enviar Reclamo</button>
+                <button type="button" class="btn-enviar" id="btn-reclamaciones">Enviar Reclamo</button>
             </form>
         </main>
         <footer>
             <p><strong>Reclamo:</strong> Disconformidad relacionada a los productos o servicios.</p>
             <p><strong>Queja:</strong> Malestar o descontento relacionado a la atención pública.</p>
         </footer>
+        <script src="scripts.js" defer></script>
     </body>
 </html>

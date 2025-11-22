@@ -52,7 +52,43 @@ document.addEventListener("DOMContentLoaded", () => { // Asegura que el DOM est�
                 title: "Enviado correctamente",
                 text: "Pronto un asesor se contactará con usted"
             });
+            const datos = {nombre, apellido, celular, correo};
+            function guardarUsuario(nuevoUsuario) {
+                let usuarios = JSON.parse(localStorage.getItem("datosUsuario")) || [];
+                usuarios.push(nuevoUsuario);
+                localStorage.setItem("datosUsuario", JSON.stringify(usuarios));
+            }
+            guardarUsuario(datos);
             document.getElementById("form-contacto").reset();
+        });
+    }
+
+    // Reclamaciones
+    const btnReclamo = document.getElementById("btn-reclamaciones"); // Obtener el botón de reclamaciones
+    if (btnReclamo) { // Verificar si l botón existe
+        btnReclamo.addEventListener("click", (e) => {
+            e.preventDefault();
+            const nombre = document.querySelector("#nombre").value.trim() || "";
+            const domicilio = document.querySelector("#domicilio").value.trim() || "";
+            const monto = document.querySelector("#monto").value.trim() || "";
+            const detalle = document.querySelector("#detalle").value.trim() || "";
+
+            console.log("Nombre:", nombre, "Domicilio:", domicilio, "Monto", monto, "Detalle", detalle);
+            
+            if(!nombre || !domicilio || !monto || !detalle) { // Validar campos vacíos
+                Swal.fire({
+                    icon: "error",
+                    title: "Campos incompletos",
+                    text: "Por favor completa todos los campos"
+                });
+                return;
+            }
+            Swal.fire({ // Muestro el mensaje de éxito
+                icon: "success",
+                title: "Reclamo enviado correctamente",
+                text: "Lamentamos los inconvenientes, pronto solucionaremos su problema"
+            });
+            document.querySelector("#form-reclamaciones").reset();
         });
     }
 });
