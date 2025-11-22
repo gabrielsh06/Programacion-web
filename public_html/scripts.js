@@ -154,8 +154,8 @@ document.addEventListener("DOMContentLoaded", () => { // Asegura que el DOM est�
     btnInfo.addEventListener("click", () => {
         Swal.fire({
             icon: "info",
-            title: "InformaciÃ³n del Proceso",
-            text: "AquÃ­ podrÃ¡s conocer cÃ³mo se atienden, analizan y responden los reclamos.",
+            title: "Informacion del Proceso",
+            text: "Aquí podrás conocer cómo se atienden, analizan y responden los reclamos.",
             confirmButtonText: "Entendido"
         });
     });
@@ -164,9 +164,9 @@ document.addEventListener("DOMContentLoaded", () => { // Asegura que el DOM est�
     btnReclamos.addEventListener("click", () => {
         Swal.fire({
             icon: "question",
-            title: "Â¿Deseas ir al Libro de Reclamaciones?",
+            title: "¿Deseas ir al Libro de Reclamaciones?",
             showCancelButton: true,
-            confirmButtonText: "SÃ­, ir ahora",
+            confirmButtonText: "Sí, ir ahora",
             cancelButtonText: "Cancelar"
         }).then((result) => {
             if(result.isConfirmed) {
