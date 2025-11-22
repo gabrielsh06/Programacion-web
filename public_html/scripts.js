@@ -1,16 +1,16 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => { // Asegura que el DOM esté completamente cargado
     // Sugerencias
-    const btnSugerencia = document.getElementById("btn-sugerencias");
-    if (btnSugerencia) {
+    const btnSugerencia = document.getElementById("btn-sugerencias"); // Obtener el botón de sugerencias
+    if (btnSugerencia) { // Verificar si el botón existe
         btnSugerencia.addEventListener('click', (e) => {
             e.preventDefault();
-            const nombre = document.querySelector("#nombre-suge")?.value?.trim() || "";
-            const email = document.querySelector("#email-suge")?.value?.trim() || "";
-            const sugerencia = document.querySelector("#sugerencia")?.value?.trim() || "";
+            const nombre = document.querySelector("#nombre-suge").value.trim() || "";
+            const email = document.querySelector("#email-suge").value.trim() || "";
+            const sugerencia = document.querySelector("#sugerencia").value.trim() || "";
 
             console.log("Nombre:", nombre, "Email:", email, "Sugerencia:", sugerencia);
 
-            if (!nombre || !email || !sugerencia) {
+            if (!nombre || !email || !sugerencia) { // Validar campos vacíos
                 Swal.fire({
                     icon: "error",
                     title: "Campos incompletos",
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
                 return;
             }
-            Swal.fire({
+            Swal.fire({ // Muestro el mensaje de éxito
                 icon: "success",
                 title: "Enviado correctamente",
                 text: "Gracias por enviar tus sugerencias"
@@ -28,18 +28,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Contacto
-    const btnContacto = document.getElementById("btn-contac");
-    if (btnContacto) {
+    const btnContacto = document.getElementById("btn-contac"); // Obtener el botón de contacto
+    if (btnContacto) { // Verificar si el botón existe
         btnContacto.addEventListener("click", (e) => {
             e.preventDefault();
-            const nombre = document.querySelector("#nombre")?.value?.trim() || "";
-            const apellido = document.querySelector("#apellido")?.value?.trim() || "";
-            const celular = document.querySelector("#celular")?.value?.trim() || "";
-            const correo = document.querySelector("#correo")?.value?.trim() || "";
+            const nombre = document.querySelector("#nombre").value.trim() || "";
+            const apellido = document.querySelector("#apellido").value.trim() || "";
+            const celular = document.querySelector("#celular").value.trim() || "";
+            const correo = document.querySelector("#correo").value.trim() || "";
 
             console.log("Nombre:", nombre, "Apellido:", apellido, "Celular:", celular, "Correo:", correo);
 
-            if (!nombre || !apellido || !celular || !correo) {
+            if (!nombre || !apellido || !celular || !correo) { // Validar campos vacíos
                 Swal.fire({
                     icon: "error",
                     title: "Campos incompletos",
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
                 return;
             }
-            Swal.fire({
+            Swal.fire({ // Muestro el mensaje de éxito
                 icon: "success",
                 title: "Enviado correctamente",
                 text: "Pronto un asesor se contactará con usted"
