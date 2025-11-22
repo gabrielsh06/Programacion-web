@@ -1,121 +1,142 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <title>TODO supply a title</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procedimiento de Atención de Reclamos</title>
     <link rel="shortcut icon" href="recursos/SanPablo.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
-        html {
-            background-color: #ffffff;
+        body {
+            margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
         }
 
         header {
-            background-color: #999999;
-
+            background-color: #004b8d;
+            padding: 20px;
+            color: white;
+            text-align: left;
         }
 
         header a {
-            text-decoration: none;
             color: white;
-        }
-
-        .Animate1 {
-            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
         }
 
         main {
-            background-color: #ffffff;
-            border: 1px solid #000000;
-
-            display: block;
-
-            align-content: center;
-            height: auto;
-            justify-content: center;
-            beging: 2 em px;
-
-            height: auto;
-            box-sizing: border-box;
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
         }
 
-        * {
-            padding: 0;
-            marging: 0;
-
-        }
-
-        .Cuadro {
-            marging: 0 auto;
-            width: auto;
-            align-items: center;
-            top: 50%;
-            left: 50%;
-
-        }
-
-        h3 {
-            font: 20px arial sans-serif;
+        h2 {
+            text-align: center;
+            color: #004b8d;
+            margin-bottom: 20px;
         }
 
         p {
-            font: 18px arial sans-serif;
+            font-size: 17px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .paso {
+            margin-bottom: 25px;
         }
 
         footer {
-            background-color: #999999;
-            margin: auto;
-            display: block;
+            background-color: #004b8d;
+            height: 80px;
+            margin-top: 50px;
+        }
 
-            align-content: center;
-            height: auto;
-            justify-content: center;
-            beging: 2 em px;
+        .btn {
+            margin-top: 20px;
+            padding: 12px 20px;
+            background-color: #0072c6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
 
-            height: auto;
-            box-sizing: border-box;
+        .btn:hover {
+            background-color: #005999;
+        }
+
+        footer {
+            background-color: #004b8d;
+            height: 80px;
+            margin-top: 50px;
+        }
+
+        .btn-alerta {
+            margin-top: 25px;
+            padding: 12px 20px;
+            background-color: #0072c6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn-alerta:hover {
+            background-color: #005999;
         }
     </style>
 </head>
 
 <body>
+
     <header>
-        <br>
-        <br>
-        <div>
-            <h3 class="Animate1"><a href="inicio.html"><-- Paguina anterior</a></h3>
-        </div>
+        <a href="inicio.html">← Regresar al inicio</a>
     </header>
+
     <main>
-        <div>
-            <article class="Cuadro">
-                <h3>Pobrecidimiento de atencion de reclamo</h3>
-                <p>1- Necesitaremos una forma de contactarse puede ser atrabes de un telefono o email:</p>
-                <p>Es importante aclarar que la respuesta puede tardar su tiempo </p>
-                <br><!-- Especificacion de pasos -->
-                <p>2- Necesitaremos sus datos personales como nombre dni para reguistrar adecuadamente su reclamo</p>
-                <p>Es importante tener en cuenta que se nesecita contactarce con una entidad mayor y responsable</p>
-                <br>
-                <p>3- Analisaremos el reclamo:</p>
-                <p>Es importante aclarar que se analisara si el reclamo necesitara un contacto mas
-                    personal para resolver el problema por un medio mas pacifico</p>
-                <br>
-                <p>4- Con respecto a un posible reclamo que escale:</p>
-                <p>Se tomara todas las acciones para demostrar nuestra inocencia y en caso se compruebe lo
-                    contrario nos comprometemos a estar al margen de la gusticia</p>
-                <br>
-                <p>5- Todos los reclamos escritos en el libro de reclamos se tomaran
-                    en cuenta para tener una retroalimentacion adecuada para mejorar nuestro cervicio</p>
-                <p></p>
-            </article>
+        <h2>Procedimiento de Atención de Reclamos</h2>
+
+        <div class="paso">
+            <p><strong>1. Formas de Contacto:</strong> El usuario debe proporcionar un medio válido de contacto, ya sea
+                correo electrónico o número telefónico. La respuesta será emitida dentro de un plazo razonable según la
+                naturaleza del reclamo.</p>
         </div>
 
-    </main><!-- Estructura -->
-    <footer>
-        <br>
-        <br>
-    </footer>
+        <div class="paso">
+            <p><strong>2. Registro del Reclamo:</strong> Se solicitarán datos personales como nombre completo y DNI para
+                registrar formalmente el reclamo en nuestro sistema, garantizando trazabilidad y correcta atención.</p>
+        </div>
+
+        <div class="paso">
+            <p><strong>3. Análisis del Caso:</strong> El equipo evaluará el reclamo y determinará si requiere una
+                comunicación adicional o personalizada para resolver el problema de forma apropiada y transparente.</p>
+        </div>
+
+        <div class="paso">
+            <p><strong>4. Escalamiento del Reclamo:</strong> En caso de situaciones que ameriten una instancia mayor, se
+                realizarán todas las gestiones necesarias con transparencia y responsabilidad, colaborando plenamente
+                con la normativa vigente.</p>
+        </div>
+
+        <div class="paso">
+            <p><strong>5. Mejora Continua:</strong> Todos los reclamos registrados se utilizarán como insumo para
+                mejorar nuestros servicios y fortalecer la experiencia del usuario.</p>
+        </div>
+
+        <button class="btn" id="btn-info">¿Cómo funciona este procedimiento?</button>
+        <button class="btn" id="btn-ir-reclamos">Ir al Libro de Reclamaciones</button>
+    </main>
+    <footer></footer>
+    <script src="scripts.js" defer></script>
 </body>
 
 </html>

@@ -148,4 +148,31 @@ document.addEventListener("DOMContentLoaded", () => { // Asegura que el DOM est�
             });
         });
     });
+
+
+    const btnInfo = document.getElementById("btn-info");
+    btnInfo.addEventListener("click", () => {
+        Swal.fire({
+            icon: "info",
+            title: "InformaciÃ³n del Proceso",
+            text: "AquÃ­ podrÃ¡s conocer cÃ³mo se atienden, analizan y responden los reclamos.",
+            confirmButtonText: "Entendido"
+        });
+    });
+
+    const btnReclamos = document.getElementById("btn-ir-reclamos");
+    btnReclamos.addEventListener("click", () => {
+        Swal.fire({
+            icon: "question",
+            title: "Â¿Deseas ir al Libro de Reclamaciones?",
+            showCancelButton: true,
+            confirmButtonText: "SÃ­, ir ahora",
+            cancelButtonText: "Cancelar"
+        }).then((result) => {
+            if(result.isConfirmed) {
+                window.location.href = "reclamaciones.html";
+            }
+        });
+    });
+
 });
