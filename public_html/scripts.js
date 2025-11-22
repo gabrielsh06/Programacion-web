@@ -109,4 +109,43 @@ document.addEventListener("DOMContentLoaded", () => { // Asegura que el DOM est�
             document.querySelector("#form-reclamaciones").reset();
         });
     }
+     //Promociones
+    const promoButtons = document.querySelectorAll('.promo-card button');
+
+    promoButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            const promoCard = button.closest('.promo-card');
+            
+            
+            const titulo = promoCard.querySelector('h3').textContent.trim();
+            const descripcion = promoCard.querySelector('p').textContent.trim();
+            const descuentoElement = promoCard.querySelector('.descuento');
+            const descuento = descuentoElement ? descuentoElement.textContent.trim() : "Oferta Especial";
+            
+            const urlDestino = "contactenos.html";
+            
+            Swal.fire({
+                title: `¡Activar Promoción!`,
+                html: `
+                    <h4 style="margin-bottom: 5px;">${titulo}</h4>
+                    <p style="font-weight: bold; color: #0077b6; font-size: 1.2em;">${descuento}</p>
+                    <p style="font-size: 0.9em; color: #555;">${descripcion}</p>
+                    <hr style="margin: 10px 0;">
+                    <p style="font-size: 0.9em;">Será redirigido para completar la reserva.</p>
+                `,
+                icon: 'question', 
+                showCancelButton: true,
+                confirmButtonColor: '#0077b6', 
+                cancelButtonColor: '#aaa',
+                confirmButtonText: 'Confirmar Reserva',
+                cancelButtonText: 'Ahora No'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = urlDestino; 
+                }
+            });
+        });
+    });
 });
